@@ -25,14 +25,25 @@ public class Tuto {
 	@ManyToOne(cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
 	private Utente owner;
 	@Temporal(TemporalType.DATE)
-    private Date creationtime;
+	private Date creationtime;
 	@OneToOne(cascade = {CascadeType.PERSIST},fetch = FetchType.EAGER)
 	private Categoria categoria;
-	
-	public Tuto(Utente owner, String text, Date creationtime){
-		
+
+	public Tuto(){
+
 	}
-	
+	public Tuto(Utente owner, String text, Date creationtime){
+		this.owner = owner;
+		this.text = text;
+		this.creationtime = creationtime;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -57,7 +68,7 @@ public class Tuto {
 	public void setCreationtime(Date creationtime) {
 		this.creationtime = creationtime;
 	}
-	
-	
-	
+
+
+
 }

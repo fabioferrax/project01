@@ -15,7 +15,7 @@ import javax.persistence.OrderBy;
 
 @Entity
 public class Categoria {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
 	private Long id;
@@ -23,13 +23,13 @@ public class Categoria {
 	private String categoria; 
 
 	@OneToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
-    @JoinColumn(name = "tuto_id")
+	@JoinColumn(name = "tuto_id")
 	private List<Tuto> tuto;
-	
+
 	public Categoria(){
-		
+
 	}
-	public Categoria(Categoria sottoCategoria){
+	public Categoria(String categoria){
 		this.categoria = categoria;
 	}
 	public Long getId() {
@@ -45,7 +45,7 @@ public class Categoria {
 		this.categoria = categoria;
 	}
 
-	
-	
+
+
 
 }
