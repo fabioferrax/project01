@@ -15,6 +15,7 @@ import it.uniroma3.model.Utente;
 
 public class UserDAO implements DAO<Utente> {
 
+	
 	private EntityManagerFactory emf;
 	
 	public UserDAO(EntityManagerFactory emf) {
