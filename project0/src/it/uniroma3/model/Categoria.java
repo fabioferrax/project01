@@ -23,8 +23,8 @@ public class Categoria {
 	private String categoria; 
 
 	@OneToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
-    @JoinColumn(name = "tudo_id")
-	private List<Tuto> tudo;
+    @JoinColumn(name = "tuto_id")
+	private List<Tuto> tuto;
 	
 	public Categoria(){
 		
