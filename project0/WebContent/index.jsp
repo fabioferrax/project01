@@ -33,6 +33,9 @@
 			
 		<form action="logoutUser" method="post">
 			<input type="submit" value="logout">
+		</form>		
+		<form action="addTuto" method="post">
+			<input type="submit" value="inserisciTuto">
 		</form>
 			
 		<%
