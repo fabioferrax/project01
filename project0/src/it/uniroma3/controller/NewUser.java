@@ -30,7 +30,7 @@ public class NewUser extends HttpServlet{
 		
 		request.setAttribute("Utente", user);
 		request.setAttribute("Dialog", new Dialog("Utente registrato"));
-		String nextPage = "/success.jsp";
+		String nextPage = "/result.jsp";
 		ServletContext application = getServletContext();		
 		RequestDispatcher rd = application.getRequestDispatcher(nextPage);		
 		rd.forward(request, response);

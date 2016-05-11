@@ -4,17 +4,19 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	<persistence-unit name="users-unit" transaction-type="RESOURCE_LOCAL">
 		<class>it.uniroma3.model.Utente</class>
+		<class>it.uniroma3.model.Tuto</class>
+		<class>it.uniroma3.model.Categoria</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 			<property name="javax.persistence.jdbc.user" value="postgres" />
-			<property name="javax.persistence.jdbc.password" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="squirrel" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/project0" />
 
 		<!-- Hibernate properties -->
 	        <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
-			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
 			
 			<property name="openjpa.jdbc.MappingDefaults" value="ForeignKeyDeleteAction=restrict,JoinForeignKeyDeleteAction=restrict" />
 		</properties>

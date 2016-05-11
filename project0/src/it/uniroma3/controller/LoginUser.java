@@ -26,7 +26,7 @@ public class LoginUser extends HttpServlet{
 		
 		DAO userDao = new UserDAO(emf);
 		
-		String nextPage = "/result.jsp";
+		String nextPage = "/index.jsp";
 		
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
